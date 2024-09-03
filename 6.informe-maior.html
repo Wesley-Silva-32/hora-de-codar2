@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, 
+        o último e o maior de todos eles (considere que todos os números informados serão diferentes)*/
+
+        // Lê os quatro valores informados pelo usuário
+        let valor1 = Number(prompt("Informe o primeiro valor:"));
+        let valor2 = Number(prompt("Informe o segundo valor:"));
+        let valor3 = Number(prompt("Informe o terceiro valor:"));
+        let valor4 = Number(prompt("Informe o quarto valor:"));
+
+        // Armazena os valores em um array
+        let valores = [valor1, valor2, valor3, valor4];
+
+        // Identifica o maior valor usando Math.max
+        let maiorValor = Math.max(...valores);
+
+        // Exibe o primeiro, o último e o maior valor
+        alert("O primeiro valor informado foi: " + valor1);
+        alert("O último valor informado foi: " + valor4);
+        alert("O maior valor informado foi: " + maiorValor);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

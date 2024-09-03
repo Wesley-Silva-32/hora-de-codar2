@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+
+        // Lê os três valores informados pelo usuário
+        let valor1 = Number(prompt("Informe o primeiro valor:"));
+        let valor2 = Number(prompt("Informe o segundo valor:"));
+        let valor3 = Number(prompt("Informe o terceiro valor:"));
+
+        // Verifica qual valor é o maior
+        let maiorValor;
+
+        if (valor1 > valor2 && valor1 > valor3) {
+            maiorValor = valor1;
+        } else if (valor2 > valor1 && valor2 > valor3) {
+            maiorValor = valor2;
+        } else {
+            maiorValor = valor3;
+        }
+
+        // Escreve o maior valor
+        alert("O maior valor informado é: " + maiorValor);
+        
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

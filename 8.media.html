@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+
+    <script>
+
+        /**Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses 
+         números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma 
+         mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"*/
+
+        // Inicializa um array para armazenar os valores válidos e uma variável para a soma
+        let valores = [];
+        let soma = 0;
+
+        // Lê quatro números informados pelo usuário
+        for (let i = 0; i < 4; i++) {
+            let valor = Number(prompt(`Informe o valor ${i + 1} (entre 1 e 9):`));
+
+            // Verifica se o valor está no intervalo entre 0 e 10 (não inclusivo)
+            if (valor > 0 && valor < 10) {
+                valores.push(valor);
+                soma += valor;
+            } else {
+                alert("Valor inválido. Informe um número maior que 0 e menor que 10.");
+                i--; // Decrementa o contador para permitir nova entrada
+            }
+        }
+
+        // Calcula a média dos valores válidos
+        let media = soma / valores.length;
+
+        // Exibe a média
+        alert("A média dos valores informados é: " + media);
+
+        // Verifica se a média é maior que 5 e exibe a mensagem apropriada
+        if (media > 5) {
+            alert("Você passou no teste.");
+        } else {
+            alert("Tente novamente.");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

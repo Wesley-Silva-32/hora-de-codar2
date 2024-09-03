@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Calculadora</title>
+
+    <script>
+        /*Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas 
+        (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).O programa deve calcular e escrever o 
+        resultado dessa operação sobre os dois valores lidos. 
+        
+        Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações*/
+
+        // Lê os dois valores inteiros informados pelo usuário
+        let valor1 = Number(prompt("Informe o primeiro valor inteiro:"));
+        let valor2 = Number(prompt("Informe o segundo valor inteiro:"));
+
+        // Lê a operação a ser executada
+        let operacao = Number(prompt("Informe a operação a ser executada (1 para Adição, 2 para Subtração, 3 para Divisão, 4 para Multiplicação):"));
+
+        // Inicializa uma variável para armazenar o resultado
+        let resultado;
+
+        // Executa a operação com base no código informado
+        if (operacao === 1) {
+            resultado = valor1 + valor2;
+        } else if (operacao === 2) {
+            resultado = valor1 - valor2;
+        } else if (operacao === 3) {
+            if (valor2 !== 0) {
+                resultado = valor1 / valor2;
+            } else {
+                alert("Erro: Divisão por zero não é permitida.");
+            }
+        } else if (operacao === 4) {
+            resultado = valor1 * valor2;
+        } else {
+            alert("Operação inválida. Por favor, informe 1 para Adição, 2 para Subtração, 3 para Divisão, ou 4 para Multiplicação.");
+        }
+
+        // Verifica se o resultado foi calculado e exibe o resultado
+        if (resultado !== undefined) {
+            alert("O resultado da operação é: " + resultado);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

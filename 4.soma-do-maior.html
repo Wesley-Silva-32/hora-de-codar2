@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma do maior</title>
+
+    <script>
+
+        /*Faça um programa que leia 3 valores informados pelo usuário 
+        (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.*/
+        
+        // Lê os três valores informados pelo usuário
+        let valor1 = Number(prompt("Informe o primeiro valor:"));
+        let valor2 = Number(prompt("Informe o segundo valor:"));
+        let valor3 = Number(prompt("Informe o terceiro valor:"));
+
+        // Inicializa a variável que irá armazenar a soma dos dois maiores valores
+        let somaDosMaiores;
+
+        // Verifica e soma os dois maiores valores
+        if (valor1 > valor2 && valor1 > valor3) {
+            somaDosMaiores = valor1 + (valor2 > valor3 ? valor2 : valor3);
+        } else if (valor2 > valor1 && valor2 > valor3) {
+            somaDosMaiores = valor2 + (valor1 > valor3 ? valor1 : valor3);
+        } else {
+            somaDosMaiores = valor3 + (valor1 > valor2 ? valor1 : valor2);
+        }
+
+        // Exibe a soma dos dois maiores valores
+        alert("A soma dos dois maiores valores é: " + somaDosMaiores);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+
+    <script>
+
+        /*Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números 
+        informados e escreva a média aritmética desses valores lidos.*/
+
+        // Inicializa um array para armazenar os valores
+        let valores = [];
+
+        // Lê os seis valores informados pelo usuário
+        for (let i = 0; i < 6; i++) {
+            let valor = Number(prompt(`Informe o valor ${i + 1}:`));
+            valores.push(valor);
+        }
+
+        // Calcula a soma dos valores
+        let soma = valores.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+
+        // Calcula a média aritmética
+        let media = soma / valores.length;
+
+        // Exibe os valores informados
+        alert("Os valores informados foram: " + valores.join(", "));
+
+        // Exibe a média aritmética
+        alert("A média aritmética dos valores informados é: " + media);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

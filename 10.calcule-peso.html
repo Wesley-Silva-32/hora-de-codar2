@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso ideal</title>
+
+    <script>
+
+        /*Tendo como entrada a altura e o gênero designado ao nascer (codificado da seguinte forma: 1: feminino - 2: masculino - )
+        de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas.*/
+
+        // Lê a altura e o gênero informados pelo usuário
+        let altura = Number(prompt("Informe sua altura em metros (ex: 1.75):"));
+        let genero = Number(prompt("Informe seu gênero designado ao nascer (1 para feminino, 2 para masculino):"));
+
+        // Inicializa a variável para armazenar o peso ideal
+        let pesoIdeal;
+
+        // Calcula o peso ideal com base no gênero
+        if (genero === 1) {
+            // Fórmula para o gênero feminino
+            pesoIdeal = 62.1 * altura - 44.7;
+        } else if (genero === 2) {
+            // Fórmula para o gênero masculino
+            pesoIdeal = 72.7 * altura - 58;
+        } else {
+            alert("Gênero inválido. Por favor, insira 1 para feminino ou 2 para masculino.");
+        }
+
+        // Verifica se o pesoIdeal foi calculado e exibe o resultado
+        if (pesoIdeal) {
+            alert("Seu peso ideal é: " + pesoIdeal.toFixed(2) + " kg");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

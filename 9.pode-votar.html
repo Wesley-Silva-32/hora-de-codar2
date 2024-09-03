@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano de eleição</title>
+
+    <script>
+
+        /*Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela 
+        poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).*/
+
+        // Lê o ano de nascimento informado pelo usuário
+        let anoNascimento = Number(prompt("Informe o seu ano de nascimento:"));
+
+        // Obtém o ano atual
+        let anoAtual = new Date().getFullYear();
+
+        // Calcula a idade da pessoa
+        let idade = anoAtual - anoNascimento;
+
+        // Verifica se a pessoa tem idade suficiente para votar (considerando 18 anos como a idade mínima)
+        if (idade >= 18) {
+            alert("Você pode votar este ano.");
+        } else {
+            alert("Você não pode votar este ano.");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
